@@ -2,218 +2,25 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 
 export class News extends Component {
-    articles = [
-        {
-            "source": { "id": null, "name": "NDTV News" },
-            "author": null,
-            "title": "No Ganesh Festival At Bengaluru's Idgah Maidan After Supreme Court Order - NDTV",
-            "description": "Karnataka government said allow temple \"at least for next two days\" and \"no permanent structure will be built\"; but waqf board cited 200-year history",
-            "url": "https://www.ndtv.com/india-news/ganesh-chaturthi-celebrations-at-bengaluru-idgah-maidan-supreme-court-forms-3-judge-bench-hearing-shortly-3299920",
-            "urlToImage": "https://c.ndtvimg.com/2022-08/2qvm25eg_idgah-bengaluru_625x300_30_August_22.jpg",
-            "publishedAt": "2022-08-30T14:09:00Z",
-            "content": "Heavy police deployment at Idgah Maidan in Bengaluru.\r\nNew Delhi/Bengaluru: Ganesh Chaturthi celebrations at Bengaluru's Idgah Maidan will not be held, after an order of \"status quo\" by the Supreme C… [+3373 chars]"
-        },
-        {
-            "source": { "id": null, "name": "The Indian Express" },
-            "author": "Tech Desk",
-            "title": "AMD Ryzen 7000 series gaming CPUs launched: All you need to know - The Indian Express",
-            "description": "Here's all you need to know about AMD's new 7000-series Ryzen processors.",
-            "url": "https://indianexpress.com/article/technology/tech-news-technology/amd-ryzen-7000-series-gaming-cpus-launched-all-you-need-to-know-8121370/",
-            "urlToImage": "https://images.indianexpress.com/2022/08/AMD-Ryzen-7000-series.jpg",
-            "publishedAt": "2022-08-30T13:59:52Z",
-            "content": "AMD has announced its new 7000-series CPUs that succeed last years 6000-series chips and come with the companys new Zen 4 architecture and use the AM5 platform, which AMD claims will be supported thr… [+1881 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Zoom" },
-            "author": "Times Now Digital",
-            "title": "Twitter Circle rolled out globally, add up to 150 people in your group - Times Now",
-            "description": "After testing for months with limited users, microblogging site Twitter on Tuesday announced that it has rolled out its Circle feature globally, which will allow users to share their thoughts with a smaller group -- up to 150 people.",
-            "url": "https://www.timesnownews.com/technology-science/twitter-circle-rolled-out-globally-add-up-to-150-people-in-your-group-article-93884411",
-            "urlToImage": "https://static.tnn.in/thumb/msid-93884411,imgsize-100,width-1280,height-720,resizemode-75/93884411.jpg",
-            "publishedAt": "2022-08-30T13:54:52Z",
-            "content": "FILE - The Twitter application is seen on a digital device, April 25, 2022, in San Diego. Twitter warned Thursday, July 28, that governments around the globe are asking the company to remove content … [+94 chars]"
-        },
-        {
-            "source": { "id": null, "name": "YouTube" },
-            "author": null,
-            "title": "Nasa 'hopes to launch' Artemis rocket to Moon within week - BBC News - BBC News",
-            "description": "Nasa chiefs have said they hope to launch its new Moon rocket, the Space Launch System, later this week.The Artemis 1 mission blast off was postponed at firs...",
-            "url": "https://www.youtube.com/watch?v=yLmrvX1uWto",
-            "urlToImage": "https://i.ytimg.com/vi/yLmrvX1uWto/maxresdefault.jpg",
-            "publishedAt": "2022-08-30T12:30:30Z",
-            "content": null
-        },
-        {
-            "source": { "id": null, "name": "Biospectrumindia.com" },
-            "author": null,
-            "title": "ICPA launches anti-ulcer dental paste for mouth ulcers - BSI bureau",
-            "description": "Triamcinolone acetonide, the main chemical in the paste helps stop or lower the irritation and swelling",
-            "url": "https://www.biospectrumindia.com/news/43/21890/icpa-launches-anti-ulcer-dental-paste-for-mouth-ulcers.html",
-            "urlToImage": "https://www.biospectrumindia.com/uploads/articles/trioplast-21890.jpg",
-            "publishedAt": "2022-08-30T12:29:53Z",
-            "content": "Triamcinolone acetonide, the main chemical in the paste helps stop or lower the irritation and swelling\r\nICPA Health Products (ICPA) has introduced its latest offering – Trioplast, an oral anti-ulcer… [+600 chars]"
-        },
-        {
-            "source": { "id": null, "name": "NDTV News" },
-            "author": "NDTV Sports Desk",
-            "title": "Watch: Injured Pakistan Pacer Naseem Shah Gets Emotional While Leaving Field During India Clash - NDTV Sports",
-            "description": "Towards the end of the Indian innings, Pakistan pacer Naseem Shah looked like suffering from cramps in the Asia Cup clash",
-            "url": "https://sports.ndtv.com/asia-cup-2022/ind-vs-pak-injured-pakistan-pacer-naseem-shah-gets-emotional-while-leaving-field-during-india-clash-watch-3300239",
-            "urlToImage": "https://c.ndtvimg.com/2022-08/hfa0vkgg_naseem-shah_625x300_30_August_22.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675",
-            "publishedAt": "2022-08-30T12:12:12Z",
-            "content": "The India-Pakistan Asia Cup 2022 clash saw several memorable moments with the Rohit-Sharma led ultimately prevailing by five wickets on Sunday. For Pakistan, teenage pace sensation Naseem Shah made h… [+1541 chars]"
-        },
-        {
-            "source": { "id": null, "name": "DNA India" },
-            "author": "DNA  Web Team",
-            "title": "Want to reverse diabetes? Cut down carbs and add protein, says ICMR - DNA India",
-            "description": "Around 60 to 75 percent of our total calorie intake is in the form of carbohydrates and only 10 percent comprises proteins.",
-            "url": "https://www.dnaindia.com/health/report-cut-down-carbs-by-55-per-cent-increase-protein-by-20-per-cent-to-reverse-diabetics-says-icmr-2981016",
-            "urlToImage": "https://cdn.dnaindia.com/sites/default/files/styles/half/public/2022/08/30/2534563-proper-diet.png",
-            "publishedAt": "2022-08-30T12:07:45Z",
-            "content": "Reported By:| Edited By: DNA Web Team |Source: DNA webdesk |Updated: Aug 30, 2022, 05:37 PM ISTDiabetes is a hormonal disorder that affects the way the body uses food. When we eat food, our pancreas … [+2414 chars]"
-        },
-        {
-            "source": { "id": null, "name": "The Indian Express" },
-            "author": "Abhishek Angad",
-            "title": "Jharkhand ruling alliance MLAs may be flown to Chhattisgarh; leaders say Rajasthan is another option - The Indian Express",
-            "description": "Highly placed sources in the government said the MLAs are being taken to Raipur, Chhattisgarh, where a Congress dispensation is in place.",
-            "url": "https://indianexpress.com/article/india/jharkhand-ruling-alliance-mlas-chhattisgarh-leaders-say-rajasthan-is-another-option-8121163/",
-            "urlToImage": "https://images.indianexpress.com/2022/08/soren-2.jpg",
-            "publishedAt": "2022-08-30T11:48:28Z",
-            "content": "Barely three days after the MLAs of the ruling coalition in Jharkhand boarded buses for a day-out in the states Khunti, UPA legislators have once again set out on buses. This time, 31 MLAs including … [+2650 chars]"
-        },
-        {
-            "source": { "id": "google-news", "name": "Google News" },
-            "author": null,
-            "title": "Bengaluru rains: Outer Ring Road completely inundated after overnight heavy downpour - The Hindu",
-            "description": null,
-            "url": "https://news.google.com/__i/rss/rd/articles/CBMimQFodHRwczovL3d3dy50aGVoaW5kdS5jb20vbmV3cy9jaXRpZXMvYmFuZ2Fsb3JlL2JlbmdhbHVydS1yYWlucy1vdXRlci1yaW5nLXJvYWQtY29tcGxldGVseS1pbnVuZGF0ZWQtYWZ0ZXItYW4tb3Zlcm5pZ2h0LWhlYXZ5LWRvd25wb3VyL2FydGljbGU2NTgyOTQ1My5lY2XSAQA?oc=5",
-            "urlToImage": null,
-            "publishedAt": "2022-08-30T11:43:00Z",
-            "content": null
-        },
-        {
-            "source": { "id": null, "name": "The Indian Express" },
-            "author": "Shubhajit Roy",
-            "title": "Pakistan floods: Modi reaches out, talks on to extend aid - The Indian Express",
-            "description": "If cleared, it will be the first time since the BJP government came to power in 2014 that India will be extending aid to Pakistan on account of a natural disaster.",
-            "url": "https://indianexpress.com/article/india/pakistan-floods-modi-reaches-out-talks-on-to-extend-aid-8119695/",
-            "urlToImage": "https://images.indianexpress.com/2022/08/pakistan-floods-3.jpg",
-            "publishedAt": "2022-08-30T11:19:10Z",
-            "content": "In his first statement on the floods in Pakistan, Prime Minister Narendra Modi on Monday said he was saddened to see the devastation and hoped for an early restoration of normalcy.The Indian Express … [+2424 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Hindustan Times" },
-            "author": "Harshit Sabarwal",
-            "title": "Nokia launches 2660 flip phone in India at price of ₹4,699 - Hindustan Times",
-            "description": "Nokia 2660 flip phone: The flip phone comes with big buttons and a big screen. The phone has 48 MB RAM, 128 MB Internal storage, microcard SD support up to 32 GB and Dual SIM. The SIM size for the phone is nano.",
-            "url": "https://www.hindustantimes.com/technology/nokia-launches-2660-flip-phone-in-india-at-price-of-rs-4699-101661855193323.html",
-            "urlToImage": "https://images.hindustantimes.com/img/2022/08/30/1600x900/nokia_2660_1661857888834_1661857902417_1661857902417.JPG",
-            "publishedAt": "2022-08-30T11:18:34Z",
-            "content": "Finnish mobile giant Nokia has launched the 2660 flip phone in India with a brand new look. According to Nokia's website, the 2660 Flip is available for 4,699 (inclusive of all taxes).\r\nEarlier on Tu… [+1414 chars]"
-        },
-        {
-            "source": { "id": null, "name": "DAWN.com" },
-            "author": "AFP",
-            "title": "India's Gautam Adani becomes world's third-richest person - DAWN.com",
-            "description": "He made his fortune in ports and commodities trading and now operates India's third-largest conglomerate.",
-            "url": "https://www.dawn.com",
-            "urlToImage": "https://i.dawn.com/large/2022/08/301556115d316cf.jpg?r=155922",
-            "publishedAt": "2022-08-30T11:01:12Z",
-            "content": "Indian industrialist Gautam Adani became the worlds third-richest person on the Bloomberg Billionaires Index on Tuesday, the first time an Asian has ranked in the top three.\r\nThe self-made billionair… [+2197 chars]"
-        },
-        {
-            "source": { "id": null, "name": "The Indian Express" },
-            "author": "Reuters",
-            "title": "Remains of large dinosaur skeleton unearthed in Portugal - The Indian Express",
-            "description": "Fossilized fragments from the dinosaur were first discovered in 2017 by a property owner in the city of Pombal in central Portugal while doing construction work.",
-            "url": "https://indianexpress.com/article/technology/science/remains-of-large-dinosaur-skeleton-unearthed-in-portugal-8121052/",
-            "urlToImage": "https://images.indianexpress.com/2022/08/Portugal-dinosaur-fossil-20220830.jpg",
-            "publishedAt": "2022-08-30T10:59:03Z",
-            "content": "Paleontologists have been working away in a Portuguese backyard to unearth the remains of what could be the largest dinosaur ever found in Europe, University of Lisbon researchers said."
-        },
-        {
-            "source": { "id": null, "name": "News18" },
-            "author": "Entertainment Bureau",
-            "title": "Actor Kamaal R Khan Arrested Over Controversial Tweet After He Lands In Mumbai - News18",
-            "description": "KRK is a self-proclaimed film critic and known for posting controversial tweets. Most recently, he tweeted Anushka Sharma was behind Virat Kohli's 'depression'.",
-            "url": "https://www.news18.com/news/movies/kamaal-rashid-khan-aka-krk-arrested-by-mumbai-police-over-controversial-tweet-5849635.html",
-            "urlToImage": "https://images.news18.com/ibnlive/uploads/2022/08/kamal-rashid-khan-1-166183118416x9.jpg",
-            "publishedAt": "2022-08-30T10:53:00Z",
-            "content": "Kamaal Rashid Khan Aka KRK, who is a self-proclaimed film critic, has been arrested by Mumbai police over his controversial tweet in 2020. KRK is a controversial figure who is known for taking jibes … [+1795 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Daily Sabah" },
-            "author": "Reuters",
-            "title": "Benjamin Button of seas: Scientists crack DNA of immortal jellyfish | Daily Sabah - Daily Sabah",
-            "description": "Immortality as a concept is one that fascinates everyone and stands elusive for human beings and almost every other living organism. However, some very...",
-            "url": "https://www.dailysabah.com/life/science/benjamin-button-of-seas-scientists-crack-dna-of-immortal-jellyfish",
-            "urlToImage": "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/08/30/thumbs/800x531/227740.jpg",
-            "publishedAt": "2022-08-30T10:07:32Z",
-            "content": "Immortality as a concept is one that fascinates everyone and stands elusive for human beings and almost every other living organism. However, some very rare species have mastered the art of staying a… [+2434 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Hindustan Times" },
-            "author": "Alok K N Mishra",
-            "title": "Delhi liquor policy: Anna Hazare says Arvind Kejriwal ‘drunk on power’ - Hindustan Times",
-            "description": "In a hard-hitting letter, the first-of-its-kind by the activist to his former aide since he became CM, Hazare said he (Kejriwal) appears to have forgotten his ideal principles | Latest News India",
-            "url": "https://www.hindustantimes.com/india-news/delhi-liquor-policy-anna-hazare-says-arvind-kejriwal-drunk-on-power-101661853984119.html",
-            "urlToImage": "https://images.hindustantimes.com/img/2022/08/30/1600x900/ce4c8a78-2848-11ed-bc83-9c2713d606c3_1661854219114.jpg",
-            "publishedAt": "2022-08-30T10:06:23Z",
-            "content": "Expressing his disappointment over the alleged corruption in the excise policy 2021-22 which is being investigated by the CBI, social activist Anna Hazare on Tuesday wrote to Delhi chief minister and… [+1925 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Hindustan Times" },
-            "author": "HT Sports Desk",
-            "title": "Babar Azam's timid response to Indian journalist's question on Hardik Pandya - Hindustan Times",
-            "description": "Pakistan captain Babar Azam, who too was dismissed off a short ball, albeit against Bhuvbeshwar Kumar, was asked about Hardik's brilliance. Unlike some noted former Pakistan cricketers including Wasim Akram, Waqar Younis and Shahid Afridi, the right-hander ga…",
-            "url": "https://www.hindustantimes.com/cricket/babar-azam-s-timid-response-to-indian-journalist-s-question-on-hardik-pandya-after-india-beat-pakistan-101661853360371.html",
-            "urlToImage": "https://images.hindustantimes.com/img/2022/08/30/1600x900/babar_PC_1661853539900_1661853549066_1661853549066.JPG",
-            "publishedAt": "2022-08-30T10:01:58Z",
-            "content": "Hardik Pandya's heroics with both and ball in India's Asia Cup opener against Pakistan in Dubai still continues to be the talk of the town. The all-rounder earned plaudits from the who's who of the g… [+2347 chars]"
-        },
-        {
-            "source": { "id": null, "name": "NDTV News" },
-            "author": null,
-            "title": "New Pic Of Malaika Arora And Arjun Kapoor With Bride Arpita Mehta - NDTV Movies",
-            "description": "What's not to love about the picture?",
-            "url": "https://www.ndtv.com/entertainment/new-pic-of-malaika-arora-and-arjun-kapoor-with-bride-arpita-mehta-3299664",
-            "urlToImage": "https://c.ndtvimg.com/2022-08/mtebeni8_malaika_625x300_30_August_22.jpg",
-            "publishedAt": "2022-08-30T09:58:19Z",
-            "content": "Malaika and Arjun with Arpita Mehta. (courtesy: arjunkapoor)\r\nNew Delhi: Malaika Arora and Arjun Kapoor had too much fun at designers Kunal Rawal and Arpita Mehta's Mumbai wedding over the weekend. A… [+1941 chars]"
-        },
-        {
-            "source": { "id": null, "name": "Telangana Today" },
-            "author": "Telangana Today",
-            "title": "Bajaj Electronics launches Samsung's new Galaxy Z series phones - Telangana Today",
-            "description": "Galaxy Z Fold 4 comes with a flagship camera hosting a 50MP wide lens, 30X Space Zoom lens and 3x optical zoom.",
-            "url": "https://telanganatoday.com/bajaj-electronics-launches-samsungs-new-galaxy-z-series-phones",
-            "urlToImage": "https://cdn.telanganatoday.com/wp-content/uploads/2022/08/Bajaj.jpg",
-            "publishedAt": "2022-08-30T09:50:22Z",
-            "content": null
-        },
-        {
-            "source": { "id": null, "name": "Livemint" },
-            "author": "Reuters",
-            "title": "Axis Bank eyes 10% stake in Go Digit life insurance business: Report | Mint - Mint",
-            "description": "Axis is planning to take a 10% stake for around $9 million in the start-up's upcoming life insurance business, effectively valuing the business at $90 million",
-            "url": "https://www.livemint.com/industry/banking/axis-bank-eyes-10-stake-in-go-digit-life-insurance-business-report-11661850731070.html",
-            "urlToImage": "https://images.livemint.com/img/2022/08/30/600x338/Axis_Bank_1661850800388_1661850800799_1661850800799.jpg",
-            "publishedAt": "2022-08-30T09:14:15Z",
-            "content": "India's Axis Bank is in talks to acquire a stake in Go Digit Life Insurance, two sources with direct knowledge of the matter told Reuters, as the country's third biggest private lender seeks to tap a… [+2680 chars]"
-        }
-    ]
     constructor(){
         super();
         this.state = {
-            articles: this.articles,
+            articles: [],
             loading: false,
             // title: this.articles.title,
             // description: this.articles.description,
             // imageUrl: this.articles.urlToImage,
             // newsUrl: this.articles.url 
         }
+    }
+
+    async componentDidMount(){
+        let url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=e5c8d47f4bb84396861f582a4a91dd12";
+        let data = await fetch(url);
+        let parsedData = await data.json();
+        this.setState({
+            articles: parsedData.articles
+        })
     }
 
   render() {
