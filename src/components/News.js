@@ -80,7 +80,7 @@ export class News extends Component {
         <div className="row">
             {!this.state.loading && articles.map((article)=>{
             return <div className="col-md-4" key={article.url}>
-                <NewsItem title={article.title ? article.title.slice(0, 45) : ""} description={article.description ? article.description.slice(0, 88) : ""} imageUrl={article.urlToImage} newsUrl={article.url}/>
+                <NewsItem title={article.title ? article.title.slice(0, 45) : ""} description={article.description ? article.description.slice(0, 88) : ""} imageUrl={article.urlToImage} newsUrl={article.url} author={!article.author? "unknown" :article.author} date={article.publishedAt} source={article.source.name} />
             </div>
             })}  
 			<div className="container d-flex justify-content-between">
