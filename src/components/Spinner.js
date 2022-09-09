@@ -5,14 +5,14 @@ export class Spinner extends Component {
     return (
     <div className='text-center my-5' style={{position: 'relative', top:'35%'}}>
           
-        <div class="spinner-grow text-danger" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow text-info" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-info" role="status">
+            <span className="visually-hidden">Loading...</span>
         </div>
 
 

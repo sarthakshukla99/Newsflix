@@ -73,7 +73,7 @@ export class News extends Component {
   render() {
       const {articles}= this.state
     return (
-      <div className='container my-3'>
+      <div className='container' style={{marginTop: '86px',}}>
         <h1 className='text-center'> <span style={{fontSize:'30x', fontFamily: 'fantasy', color:'red', letterSpacing:'4px'}}>Newsflix</span> - Top Headlines</h1> 
 		{this.state.loading && <Spinner/>}
 
@@ -84,7 +84,9 @@ export class News extends Component {
             </div>
             })}  
 			<div className="container d-flex justify-content-between">
-				<button disabled={this.state.page <= 1} type="button" className="btn btn-info" onClick={this.handlePreviousClick}>&larr; Previous</button>
+				<button disabled={this.state.page <= 1} type="button" className="btn btn-info" onClick={this.handlePreviousClick}>&larr; Previous
+                </button>
+
 				<button disabled={this.state.page + 1 > Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-warning" onClick={this.handleNextClick}>Next &rarr;</button>
 			</div>
         </div>
